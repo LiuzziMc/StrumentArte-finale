@@ -1,0 +1,76 @@
+<img src="assets/images/bnr.jpg" class="w-100"><br><br>
+<div class="card">
+    <div class="row">
+        <div class="col-md-8 cart">
+            <div class="title">
+                <div class="row">
+                    <div class="col">
+                        <h4 class="text-black"><b>Carrello</b></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row border-top border-bottom" *ngFor="let item of items">
+                <div class="row main align-items-center">
+                    <div class="col-2">
+                        <img class="picture1 w-100" [src]="item.image1" [alt]="item.name" />
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                            <h6 class="text-black text-center">{{ item.name.toUpperCase () }}</h6>
+                        </div>
+
+                    </div>
+                    <div class="col text-black">
+                        {{item.price | currency: 'EUR'}}
+                    </div>
+
+                    <div class="col">
+                        <input [(ngModel)]="item.quantity" min="1" name="quantity" type="number"
+                            class="form-control form-control-sm bg-white text-black mt-3" style="width: 60px; " />
+                    </div>
+                    <div class="col">
+                        <div class="col-md-1 col-lg-1 col-xl-1  ">
+                            <a class="text-black"><i class="bi bi-trash" (click)="clearProduct(item.id_product) "
+                                    role="button"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="back-to-shop"><a (click)="goToShop()" role="button">&leftarrow;</a><span
+                    class="text">Continua ad acquistare</span></div>
+        </div>
+        <div class="col-md-4 summary">
+            <div>
+                <h5><b>Riepilogo ordine</b></h5>
+            </div>
+            <hr>
+
+            <h5 class="text-uppercase mb-3 text-black">Inserisci codice sconto</h5>
+
+            <div class="mb-5">
+                <div class="form-outline">
+                    <input type="text" id="form3Examplea2" [(ngModel)]="discountCode"
+                        class="form-control form-control-lg bg-white" />
+                </div>
+            </div>
+            <div *ngIf="!isDiscountCodeValid()" class="text-black">
+                Codice sconto non valido
+            </div>
+
+            <hr class="my-4">
+
+            <div class="d-flex justify-content-between mb-5">
+                <h5 class="text-uppercase text-black">Totale</h5>
+                <h5 class="text-black">{{ getTotalPrice() | currency: 'EUR' }}</h5>
+            </div>
+            <button (click)="goToCheckout()" type="button" class="btn bg-facebook btn-block btn-lg text-white"
+                data-mdb-ripple-color="dark">Acquista</button>
+
+            <div>
+                <button (click)=" clearCart()" type="button" class="btn bg-facebook btn-block btn-lg text-white "
+                    data-mdb-ripple-color="dark">Svuota Carrello</button>
+            </div>
+        </div>
+    </div>
+</div>
+<br>

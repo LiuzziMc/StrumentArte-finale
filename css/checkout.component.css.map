@@ -1,0 +1,1 @@
+{"version":3,"sources":["..\\src\\app\\pages\\checkout\\checkout.component.scss","checkout.component.css"],"names":[],"mappings":"AAAA;EACA,iBAAA;ACCA","file":"checkout.component.css","sourcesContent":[".margin {\r\nmargin-top: 200px;\r\n}",".margin {\n  margin-top: 200px;\n}"]}

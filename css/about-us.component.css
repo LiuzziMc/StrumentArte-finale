@@ -1,0 +1,12 @@
+.card-hover {
+  transition: transform 0.3s;
+}
+
+.card-hover:hover {
+  transform: scale(1.1);
+}
+
+.card-measure {
+  width: 18rem;
+  margin-right: 10px;
+}/*# sourceMappingURL=about-us.component.css.map */

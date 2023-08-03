@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+@import 'scss/variables';
+@import 'scss/bg-colors';
+@import 'scss/search';
+
+html,
+body {
+    height: 100%;
+}
+
+.container {
+    min-height: 100%;
+    position: relative;
+}

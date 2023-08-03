@@ -1,0 +1,276 @@
+<img src="assets/images/bnr.jpg" class="w-100">
+ 
+ <!--PROFILE-->
+<div class=" bg-gradient">
+ <div class="container-xl px-4 mt-4 " id="Profilo">
+    <!-- Account page navigation-->
+    <nav class="nav nav-borders">
+        <a class="nav-link  ms-0 text-Brown" href="#" target="__blank" id="profilo" role="button">Profilo</a>
+      <a class="nav-link text-Brown" (click)="scrollToElement('pagamento')" role="button"> Pagamento</a>
+        <a class="nav-link text-Brown" (click)="scrollToElement('sicurezza')" role="button">Sicurezza</a>
+    </nav>
+
+    <hr class="mt-0 mb-4 text-Brown">
+    <div class="row">
+      <div class="col-xl-4">
+        <!-- Profile picture card-->
+        <div class="card mb-4 mb-xl-0">
+          <div class="card-header text-white">Foto Profilo</div>
+          <div class="card-body text-center">
+            <!-- Profile picture image-->
+            <img class="img-account-profile mb-2 w-100" src="assets/images/Progetto senza titolo.png"
+              alt="">
+            <!-- Profile picture help block-->
+            <div class="small font-italic text-muted mb-4">JPG or PNG</div>
+            <!-- Profile picture upload button-->
+            <button class="btn bg-facebook  btn-block border-white text-white" type="button">Carica una nuova
+              immagine</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-8">
+        <!-- Account details card-->
+        <div class="card mb-4">
+          <div class="card-header text-white">Dettagli Account</div>
+          <div class="card-body">
+            <form>
+              <!-- Form Group (username)-->
+              <div class="mb-3">
+                <label class="small mb-1 text-white" for="inputUsername">Username </label>
+                <input class="form-control" id="inputUsername" type="text" placeholder="" value="username">
+              </div>
+              <!-- Form Row-->
+              <div class="row gx-3 mb-3">
+                <!-- Form Group (first name)-->
+                <div class="col-md-6">
+                  <label class="small mb-1 text-white" for="inputFirstName">Nome</label>
+                  <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name"
+                    value="Valeria">
+                </div>
+                <!-- Form Group (last name)-->
+                <div class="col-md-6">
+                  <label class="small mb-1 text-white" for="inputLastName">Cognome</label>
+                  <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name"
+                    value="Luna">
+                </div>
+              </div>
+              <!-- Form Row        -->
+              <div class="row gx-3 mb-3">
+                <!-- Form Group (organization name)-->
+                <div class="col-md-6">
+                  <label class="small mb-1 text-white" for="inputOrgName"></label>
+                  <input class="form-control" id="inputOrgName" type="text" placeholder="" value="">
+                </div>
+                <!-- Form Group (location)-->
+                <div class="col-md-6">
+                  <label class="small mb-1 text-white" for="inputLocation">Località</label>
+                  <input class="form-control" id="inputLocation" type="text" placeholder="Enter your location"
+                    value="Lecce, LE, Italia">
+                </div>
+              </div>
+              <!-- Form Group (email address)-->
+              <div class="mb-3">
+                <label class="small mb-1 text-white" for="inputEmailAddress">Email </label>
+                <input class="form-control" id="inputEmailAddress" type="email" placeholder="Enter your email address"
+                  value="Valeria@info.com">
+              </div>
+              <!-- Form Row-->
+              <div class="row gx-3 mb-3">
+                <!-- Form Group (phone number)-->
+                <div class="col-md-6">
+                  <label class="small mb-1 text-white" for="inputPhone">Numero di telefono</label>
+                  <input class="form-control" id="inputPhone" type="tel" placeholder="Enter your phone number"
+                    value="329/645389">
+                </div>
+                <!-- Form Group (birthday)-->
+                <div class="col-md-6">
+                  <label class="small mb-1 text-white" for="inputBirthday">Data di nascita</label>
+                  <input class="form-control" id="inputBirthday" type="text" name="birthday"
+                    placeholder="Enter your birthday" value="06/10/1988">
+                </div>
+              </div>
+              <!-- Save changes button-->
+              <button class="btn bg-facebook btn-block border-white text-white" type="button">Salva</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<br>
+  <!--BILING-->
+
+  <div class="container-xl px-4 mt-4 " id="pagamento">
+    <!-- Account page navigation-->
+    <nav class="nav nav-borders">
+        <a class="nav-link text-Brown" (click)="scrollToElement('profilo')" role="button"> Profilo</a>
+        <a class="nav-link  text-Brown" href="" target="__blank" role="button">Pagamento</a>
+      <a class="nav-link text-Brown" (click)="scrollToElement('sicurezza')" role="button"> Sicurezza</a>
+      <hr class="text-Brown">
+
+    </nav>
+    <hr class="mt-0 mb-4 text-Brown">
+
+    <!-- Payment methods card-->
+    <div class="card card-header-actions mb-4">
+      <div class="card-header">
+        Metodo di pagamento
+        <button class="btn bg-facebook btn-sm btn-block border-white text-white" type="button">Aggiungi nuovo metodo di
+          pagamento</button>
+      </div>
+      <div class="card-body px-0">
+        <!-- Payment method 1-->
+        <div class="d-flex align-items-center justify-content-between px-4">
+          <div class="d-flex align-items-center">
+            <i class="fab fa-cc-visa fa-2x cc-color-visa"></i>
+            <div class="ms-4">
+              <div class="small">Visa *****1234</div>
+              <div class="text-xs text-muted">Scadenza 04/2024</div>
+            </div>
+          </div>
+          <div class="ms-4 small">
+            <button class="btn bg-facebook btn-sm btn-block border-white text-white" type="button">Modifica</button>
+          </div>
+        </div>
+        <hr class="text-Brown">
+        <!-- Payment method 2-->
+        <div class="d-flex align-items-center justify-content-between px-4">
+          <div class="d-flex align-items-center">
+            <i class="fab fa-cc-mastercard fa-2x cc-color-mastercard"></i>
+            <div class="ms-4">
+              <div class="small">Mastercard *****5678</div>
+              <div class="text-xs text-muted">Scadenza 05/2022</div>
+            </div>
+          </div>
+          <div class="ms-4 small">
+            <button class="btn bg-facebook btn-sm btn-block border-white text-white" type="button">Modifica</button>
+          </div>
+        </div>
+        <hr class="text-Brown">
+       
+    <!-- Billing history card-->
+    <div class="card mb-4">
+      <div class="card-header">Storico pagamenti</div>
+      <div class="card-body p-0">
+        <!-- Billing history table-->
+        <div class="table-responsive table-billing-history">
+          <table class="table mb-0">
+            <thead>
+              <tr>
+                <th class="border-gray-200" scope="col">Transazione ID</th>
+                <th class="border-gray-200" scope="col">Data</th>
+                <th class="border-gray-200" scope="col">Importo</th>
+                <th class="border-gray-200" scope="col">Stato</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#39201</td>
+                <td>06/15/2021</td>
+                <td>€29.99</td>
+                <td><span class="badge bg-light text-dark">In attesa di pagamento</span></td>
+              </tr>
+              <tr>
+                <td>#38594</td>
+                <td>05/15/2021</td>
+                <td>€29.99</td>
+                <td><span class="badge bg-success">Pagato</span></td>
+              </tr>
+              <tr>
+                <td>#38223</td>
+                <td>04/15/2021</td>
+                <td>€29.99</td>
+                <td><span class="badge bg-success">Pagato</span></td>
+              </tr>
+              <tr>
+                <td>#38125</td>
+                <td>03/15/2021</td>
+                <td>€29.99</td>
+                <td><span class="badge bg-success">Pagato</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+<br>
+
+  <!--SECURITY-->
+
+  <div class="container-xl px-4 mt-4 ">
+    <!-- Account page navigation-->
+    <nav class="nav nav-borders">
+        <a class="nav-link text-Brown" (click)="scrollToElement('profilo')" role="button"> Profilo</a>
+      <a class="nav-link text-Brown" (click)="scrollToElement('pagamento')" role="button"> Pagamento</a>
+      <a class="nav-link text-Brown" href="" target="__blank" id="sicurezza" role="button"> Sicurezza</a>
+    </nav>
+    <hr class="mt-0 mb-4 text-Brown">
+    <div class="row">
+      <div class="col-lg-8">
+        <!-- Change password card-->
+        <div class="card mb-4">
+          <div class="card-header text-white">Cambia Password</div>
+          <div class="card-body">
+            <form>
+              <!-- Form Group (current password)-->
+              <div class="mb-3">
+                <label class="small mb-1 text-white" for="currentPassword"> Password corrente</label>
+                <input class="form-control" id="currentPassword" type="password" placeholder="">
+              </div>
+              <!-- Form Group (new password)-->
+              <div class="mb-3">
+                <label class="small mb-1 text-white" for="newPassword">Nuova Password</label>
+                <input class="form-control" id="newPassword" type="password" placeholder="">
+              </div>
+              <!-- Form Group (confirm password)-->
+              <div class="mb-3">
+                <label class="small mb-1 text-white" for="confirmPassword">Conferma Password</label>
+                <input class="form-control" id="confirmPassword" type="password" placeholder="">
+              </div>
+              <button class="btn bg-facebook btn-sm btn-block border-white text-white" type="button">Salva</button>
+            </form>
+          </div>
+        </div>
+        <!-- Delete account card-->
+        <div class="card mb-4">
+          <div class="card-header text-white">Cancella Account</div>
+          <div class="card-body">
+            <p> L'eliminazione del tuo account è un'azione permanente e non può essere annullata. Se sei sicuro di voler
+              eliminare il tuo account, seleziona il pulsante in basso.</p>
+            <button class="btn bg-facebook  btn-sm btn-block border-white text-white" type="button">Elimina</button>
+          </div>
+        </div>
+        <button class="btn bg-facebook btn-sm btn-block border-white text-white" type="button">LOGOUT</button><br><br><br>
+      </div>
+      <div class="col-lg-4">
+        <!-- Two factor authentication card-->
+        <div class="card mb-4">
+          <div class="card-header text-white">Autenticazione a due fattori</div>
+          <div class="card-body">
+            <p>Aggiungi un altro livello di sicurezza al tuo account abilitando l'autenticazione a due fattori. Ti
+              invieremo un messaggio di testo per verificare i tuoi tentativi di accesso su dispositivi e browser non
+              riconosciuti. </p>
+            <form>
+              <div class="form-check">
+                <input class="form-check-input" id="twoFactorOn" type="radio" name="twoFactor" checked="">
+                <label class="form-check-label" for="twoFactorOn">On</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" id="twoFactorOff" type="radio" name="twoFactor">
+                <label class="form-check-label" for="twoFactorOff">Off</label>
+              </div>
+              <div class="mt-3">
+                <label class="small mb-1" for="twoFactorSMS">SMS Numero</label>
+                <input class="form-control" id="twoFactorSMS" type="tel" placeholder="Enter a phone number"
+                  value="329/3547561">
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
