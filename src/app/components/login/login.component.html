@@ -1,0 +1,86 @@
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" aria-hidden="true" aria-labelledby="loginModalLabel" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+       <button id="close-modal-access" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-header">
+          <img src="assets/images/Logo.png" class="w-50 ms-auto me-auto" alt="">
+        </div>
+        <div class="modal-body">
+          <h5 class="modal-title text-center text-white" id="loginModalLabel">Accedi</h5>
+          <!-- Input fields for login -->
+          <div class="mb-3" >
+            <label for="email" class="form-label text-white">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Inserisci la tua email" #email>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label text-white">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Inserisci la tua password" #password>
+          </div>
+          <a class="small" (click)="goToPage('recupero-password')">Password dimenticata?</a><br><br><br>
+          <a href="#!" class="small">Termini e condizioni</a>
+          <a href="#!" class="small">Privacy policy</a>
+        </div>
+        <div class="modal-footer">
+            <!-- Button to perform the login action (you can add a JavaScript function to handle the login process) -->
+            <button (click)="login({email: email.value, password: password.value})" class="btn bg-facebook btn-lg btn-block border-white text-white">Accedi</button>
+          
+          <!-- Button to open the Registration Modal -->
+          <button class="btn bg-facebook btn-lg btn-block border-white text-white" data-bs-target="#registrationModal" data-bs-toggle="modal" data-bs-dismiss="modal">Registrati</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Registration Modal -->
+  <div class="modal fade" id="registrationModal" aria-hidden="true" aria-labelledby="registrationModalLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <button id="modal-access" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-header">
+          <img src="assets/images/Logo.png" class="w-50 ms-auto me-auto" alt="">
+        </div>
+        <h5 class="modal-title text-center text-white" id="registrationModalLabel">Registrazione</h5>
+        <div class="modal-body">
+          <!-- Input fields for registration -->
+          <div class="row">
+          <div class=" col-lg-6 mb-3">
+            <label for="fullname" class="form-label text-white">Nome</label>
+            <input type="text" class="form-control" id="fullname" placeholder="Nome" name="nome" [(ngModel)]="datiUtente.nome">
+          </div>
+          <div class="col-lg-6 mb-3">
+            <label for="fullname" class="form-label text-white">Cognome</label>
+            <input type="text" class="form-control" id="fullname" placeholder="Cognome" name="cognome" [(ngModel)]="datiUtente.cognome">
+          </div>
+        </div>
+          <div class="mb-3">
+            <label for="email" class="form-label text-white">*Email</label>
+            <input type="email" class="form-control" id="email_reg" placeholder="Inserisci email" name="email" [(ngModel)]="datiUtente.email"> 
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label text-white">*Password</label>
+            <input type="password" class="form-control" id="password_reg" placeholder="Inserisci una password" name="password" [(ngModel)]="datiUtente.password">
+          </div>
+          <div class="row">
+          <div class="col-7 mb-3">
+            <label class="phone text-white" for="form-label">Numero di telefono</label>
+            <input type="tel" id="phoneNumber" class="form-control" placeholder="Inserisci il tuo numero di telefono"name="numero_tel" [(ngModel)]="datiUtente.numero_tel" />
+          </div>
+          <div class="col-5 mb-3">
+            <label class="date text-white" for="Data">Data di nascita</label>
+            <input type="date" class="form-control" id="Data" name="data_nascita" [(ngModel)]="datiUtente.data_nascita"><br>
+          </div>
+        </div>
+      </div>
+        <div class="modal-footer">
+          <!-- Button to go back to the Login Modal -->
+          <button class="btn bg-facebook btn-lg btn-block border-white text-white" data-bs-target="#loginModal" data-bs-toggle="modal" data-bs-dismiss="modal">Vai alla Login</button>
+          <!-- Button to perform the registration action (you can add a JavaScript function to handle the registration process) -->
+          <!--<button class="btn bg-facebook btn-lg btn-block border-white text-white">Registrati</button> -->
+          <button (click)="register()" class="btn bg-facebook btn-lg btn-block border-white text-white">Registrati</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   

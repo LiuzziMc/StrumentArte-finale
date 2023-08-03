@@ -1,0 +1,35 @@
+<img [src]="pageBanner" /> 
+<div id="" class="bg-dark">
+    <div class="card ">
+        <div class="card active ">
+            <div class="row">
+                <!-- Inizio ciclo *ngFor per generare le slide con i prodotti -->
+                <ng-container *ngFor="let product of products; let i = index ">
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6 d-flex flex-column align-items-center justify-content-center product-item">
+                        <div class="product-car rounded shadow">
+                            <div class="product-image">
+                                <div class="thumbnail">
+                                    <img class="picture1" [src]="product.image1" [alt]="product.name" />
+                                    <img class="picture2" [src]="product.image2" [alt]="product.name" />
+                                </div>
+                                <ul class="links align-items-center">
+                                    <li (click)="addToCart(selectedProduct)" role="button"><fa-icon class="text-dark"
+                                            [icon]="faCartShopping"></fa-icon></li>
+                                    <li (click)="addToPreferiti(product)" role="button"><fa-icon class="text-danger" [icon]="faHeart"></fa-icon></li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="content">
+                                <span class="category"><span>{{ product.category }}</span></span>
+                                <h3 class="title display-7 fs-5" role="button" (click)="goToProductDetail(product)">{{
+                                    product.name.toUpperCase() }}</h3>
+                                <div class="price"><span>Prezzo</span>€{{ product.price }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+                <!-- Fine ciclo *ngFor -->
+            </div>
+        </div>
+    </div>
+</div>

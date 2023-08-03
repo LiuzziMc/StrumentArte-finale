@@ -1,0 +1,588 @@
+{
+  "categories": [
+    {
+      "name": "tastiere",
+      "id_category": 1
+    },
+    {
+      "name": "chitarre",
+      "id_category": 2
+    },
+    {
+      "name": "bassi",
+      "id_category": 3
+    },
+    {
+      "name": "voce",
+      "id_category": 4
+    },
+    {
+      "name": "dj",
+      "id_category": 5
+    },
+    {
+      "name": "percussioni",
+      "id_category": 6
+    },
+    {
+      "name": "amplificazione",
+      "id_category": 7
+    },
+    {
+      "name": "luci",
+      "id_category": 8
+    },
+    {
+      "name": "batterie",
+      "id_category": 9
+    }
+  ],
+  "users": [
+    {
+      "id_order": "1",
+      "name": "anna",
+      "surname": "po",
+      "address": "via pluto 3, Lecce 73100",
+      "email": "info@gmail.com",
+      "password": "annapo1"
+    },
+    {
+      "id_order": "2",
+      "name": "barto",
+      "surname": "liuzzi",
+      "address": "via v.gigante 5, Lecce 73100",
+      "email": "barto@gmail.com",
+      "password": "biscotto"
+    },
+    {
+      "id_order": "3",
+      "name": "Rosaria",
+      "surname": "Rossi",
+      "address": "Via Ennio 19, Lecce, 73100",
+      "email": "rosyro@gmail.com",
+      "password": "roro90"
+    },
+    {
+      "id_order": "4",
+      "name": "Massimiliano",
+      "surname": "Caiazzo",
+      "address": "Via Senna 30, Taranto, 74020",
+      "email": "maissica@gmail.com",
+      "password": "mare"
+    },
+    {
+      "id_order": "5",
+      "name": "Marika",
+      "surname": "Caputo",
+      "address": "Via Elsa 9, Lecce, 73100",
+      "email": "caput@gmail.com",
+      "password": "stella10"
+    }
+  ],
+  "payments": [
+    {
+      "id_payment": "1",
+      "discount": "40%",
+      "note": "1",
+      "total_amount": "200.5€",
+      "payment_type": "paypal"
+    },
+    {
+      "id_payment": "2",
+      "discount": "40%",
+      "note": "3",
+      "total_amount": "300€",
+      "payment_type": "paypal"
+    },
+    {
+      "id_payment": "3",
+      "discount": "150%",
+      "note": "4",
+      "total_amount": "409€",
+      "payment_type": "credit_card"
+    },
+    {
+      "id_payment": "4",
+      "discount": "0%",
+      "note": "1",
+      "total_amount": "55.6€",
+      "payment_type": "credit_card"
+    },
+    {
+      "id_payment": "5",
+      "discount": "15%",
+      "note": "1",
+      "total_amount": "168.9€",
+      "payment_type": "paypal"
+    }
+  ],
+  "orders": [
+    {
+      "id_order": "1",
+      "purchase_date": "2023-05-12",
+      "number_of_products": "1",
+      "price": "200.5€",
+      "address": "Via CarloV 21, Lecce",
+      "fk_user": "annapo1",
+      "fk_payment": "annapo1"
+    },
+    {
+      "id_order": "2",
+      "purchase_date": "2023-04-01",
+      "number_of_products": "3",
+      "price": "300€",
+      "address": "Via Mito 10, Lecce",
+      "fk_user": "biscotto",
+      "fk_payment": "annapo1"
+    },
+    {
+      "id_order": "3",
+      "purchase_date": "2023-01-24",
+      "number_of_products": "4",
+      "price": "409€",
+      "address": "Via Ennio 40, Taranto",
+      "fk_user": "roro90",
+      "fk_payment": "annapo1"
+    },
+    {
+      "id_order": "4",
+      "purchase_date": "2023-02-23",
+      "number_of_products": "1",
+      "price": "55.6€",
+      "address": "Via Girolamo 2, Lecce",
+      "fk_user": "mare",
+      "fk_payment": "annapo1"
+    },
+    {
+      "id_order": "5",
+      "purchase_date": "2023-02-03",
+      "number_of_products": "1",
+      "price": "168.9€",
+      "address": "Via Kennedy 11, Taranto",
+      "fk_user": "stella10",
+      "fk_payment": "annapo1"
+    }
+  ],
+  "favorites": [
+    {
+      "id_favorite": "1",
+      "fk_user": "1",
+      "fk_product": "1"
+    },
+    {
+      "id_favorite": "2",
+      "fk_user": "2",
+      "fk_product": "2"
+    },
+    {
+      "id_favorite": "3",
+      "fk_user": "3",
+      "fk_product": "3"
+    },
+    {
+      "id_favorite": "4",
+      "fk_user": "4",
+      "fk_product": "4"
+    },
+    {
+      "id_favorite": "5",
+      "fk_user": "5",
+      "fk_product": "5"
+    }
+  ],
+  "credientals": [
+    {
+      "id_credential": "1",
+      "telephone_number": "334/859609",
+      "username": "anna_1",
+      "locality": "lecce",
+      "birth_year": "1994-04-23",
+      "payment_type": "paypal",
+      "fk_user": "1"
+    },
+    {
+      "id_credential": "2",
+      "telephone_number": "347/8675643",
+      "username": "bart",
+      "locality": "lecce",
+      "birth_year": "1990-01-12",
+      "payment_type": "paypal",
+      "fk_user": "2"
+    },
+    {
+      "id_credential": "3",
+      "telephone_number": "332/4536372",
+      "username": "ross",
+      "locality": "lecce",
+      "birth_year": "1996-02-01",
+      "payment_type": "paypal",
+      "fk_user": "3"
+    },
+    {
+      "id_credential": "4",
+      "telephone_number": "327/8594858",
+      "username": "massi",
+      "locality": "taranto",
+      "birth_year": "1989-06-12",
+      "payment_type": "paypal",
+      "fk_user": "4"
+    },
+    {
+      "id_credential": "5",
+      "telephone_number": "329/6574635",
+      "username": "marik",
+      "locality": "lecce",
+      "birth_year": "1993-05-25",
+      "payment_type": "paypal",
+      "fk_user": "5"
+    }
+  ],
+  "products": [
+    {
+      "id_product": "1",
+      "name": "yamaha-p45",
+      "description": "Tastiera Graded Hammer Standard (GHS) 10 Suoni strumentali Polifonia 64 note Effetti Reverb e Chorus Intelligent Acoustic Control Libreria integrata con 10 demo song e 10 song pianistiche Connessione USB-to-Host  Amplificazione: 2x 6 Watt Uscita cuffie Jack 6,3mm Accessori inclusi: Leggio, alimentatore, footswitch Il supporto non è incluso Dimensioni: 1326 x 154 x 295mm Peso: 11,5kg",
+      "price": "409.00",
+      "fk_category": "1",
+      "image1": "/assets/images/yamahap45.jpg",
+      "image2": "/assets/images/roland2.jpg",
+      "quantity": 1,
+      "banner": "/assets/images/banner-tastiere.png"
+    },
+    {
+      "id_product": "2",
+      "name": "roland-vr-09b",
+      "description":  "V-Combo VR-09B offre organi di qualità, pianoforti elettrici, pianoforti acustici e suoni di synth in uno strumento pronto per il viaggio con una tastiera waterfall di 73 tasti. Non è necessario trasportare un pesante organo combo vintage, rotary speaker e il tradizionale EP, il VR-730 ti offre i suoni essenziali ed una suonabilità autentica che ti servono salvandoti la schiena. Gli organi integrati rispondono fedelmente alle tecniche classiche, mentre gli storici pianoforti elettrici - che includono una selezione dal famoso stage-piano RD-2000 - offrono un suono e un tocco impeccabili. E con una intelligente interfaccia utente e controlli diretti, è possibile concentrarsi sull'esecuzione senza essere disturbati da regolazioni meticolose e impostazioni complicate. Il V-Combo VR-730 è lo strumento perfetto per i performer sempre in viaggio, fornendo suoni versatili e pronti all'uso in un formato trasportabile",
+      "price": "775.00",
+      "fk_category": "1",
+      "image1": "/assets/images/rolandjpg.jpg",
+      "image2": "/assets/images/roland2.jpg",
+      "quantity": 1,
+      "banner": "/assets/images/banner-tastiere.png"
+    },
+    {
+      "id_product": "3",
+      "name": "korg-pa600",
+      "description": "Il Pa600 è un nuovo Arranger professionale KORG, in cui si concentrano l'essenza sonora e le funzionalità della serie PA in uno strumento compatto ed economico. Come i modelli superiori della serie, il PA600 utilizza il sistema di generazione sonora RX (Real eXperience) e DNC (Defined Nuance Control) per offrire un suono senza precedenti in una tastiera di questo tipo. PA600 possiede un nuovo cabinet dal design moderno e compatto, un display a colori TouchView, una vasta area di memoria per i suoni PCM (Interni ed User), un'ampio database di Stili ed un eccellente sistema di amplificazione incorporato. In questo modo KORG incrementa ulteriormente lo standard di eccellenza delle tastiere arranger della fascia di prezzo entry level.",
+      "price": "50.99",
+      "fk_category": "1",
+      "image1": "/assets/images/korg-pa1.jpg",
+      "image2": "/assets/images/korg-pa.jpg",
+      "quantity": 1,
+      "banner": "/assets/images/banner-tastiere.png"
+    },
+    {
+      "id_product": "4",
+      "name": "casio-sa77",
+      "description":  "Con i loro 44 tasti, le tastiere SA-77 offrono a tutti gli apprendisti l'occorrente per suonare le prime melodie. 100 suoni, 50 ritmi e 10 brani integrati permettono di variare tra stili e generi; la produzione del suono LSI e la polifonia a 8 voci provvedono, invece, a un'ottima qualità audio. Il display a cristalli liquidi è un ottimo supporto per la selezione e il richiamo delle innumerevoli opzioni musicali. Inoltre la SA-77 consente di cambiare tra pianoforte e organo/armonium. I modelli SA si integrano in modo creativo nella camera dei bambini.",
+      "price": "320.60",
+      "fk_category": "1",
+      "image1": "/assets/images/casio.jpg",
+      "image2": "/assets/images/casio2.jpg",
+      "quantity": 1,
+      "banner": "/assets/images/banner-tastiere.png"
+    },
+    {
+      "id_product": "5",
+      "name": "medeli-m221l",
+      "description": "Con i loro 44 tasti, le tastiere SA-77 offrono a tutti gli apprendisti l'occorrente per suonare le prime melodie. 100 suoni, 50 ritmi e 10 brani integrati permettono di variare tra stili e generi; la produzione del suono LSI e la polifonia a 8 voci provvedono, invece, a un'ottima qualità audio. Il display a cristalli liquidi è un ottimo supporto per la selezione e il richiamo delle innumerevoli opzioni musicali. Inoltre la SA-77 consente di cambiare tra pianoforte e organo/armonium. I modelli SA si integrano in modo creativo nella camera dei bambini.",
+      "price": "175.50",
+      "fk_category": "1",
+      "image1": "/assets/images/medeli.jpg",
+      "image2": "/assets/images/medeli2.jpg",
+      "quantity": 1,
+      "banner": "/assets/images/banner-tastiere.png"
+    },
+    {
+      "id_product": "6",
+      "name": "kurweil-pc4-1",
+      "description": "Una delle caratteristiche amata dai tastieristi del PC4-7 è la sua capacità di caricare qualsiasi suono all'istante. Kurzweil la chiama tecnologia FlashPlay e significa che non rallenterai o rovinerai mai una performance a causa dei tempi di caricamento. Hai 2GB di suoni killer nel Kurzweil PC4-7 - tutti con tempo di caricamento pari a zero - dando al PC4-7 una quantità impressionante di potenza.",
+      "price": "612.00",
+      "fk_category": "1",
+      "image1": "/assets/images/KURZ.png",
+      "image2": "/assets/images/KURWD.jpg",
+      "quantity": 1,
+      "banner": "/assets/images/banner-tastiere.png"
+    },
+    {
+      "id_product": "7",
+      "name": "yamaha psr-sx600",
+      "description": "La PSR-SX600 offre esperienze musicali di alta qualità grazie a suoni ricchi e realistici, tra i quali un bellissimo pianoforte a coda. Grazie agli style, è possibile suonare una vasta gamma di generi musicali provenienti da tutto il mondo, mentre Smartchord ti mette a portata di mano supporti professionali. Puoi anche usare un microfono (venduto separatamente) per cantare mentre suoni, attraverso il sistema di altoparlanti integrato. La PSR-SX600 ti offre funzioni espressive professionali per migliorare le tue prestazioni; usa il Multi-pad per aggiungere loop e frasi per completare l'accompagnamento, usa il cutoff per filtrare il suono in tempo reale, o usa il nuovo Unison & Accent per trasformare gli style per le tue performance. Allora, perché non utilizzare l'app gratuita Rec'n'Share per catturare e condividere audio e video di alta qualità delle tue esibizioni, con un solo tocco.",
+      "price": "50.99",
+      "fk_category": "1",
+      "image1": "/assets/images/yamaha-psrsx600.jpg",
+      "image2": "/assets/images/yamaha-psrsx600-3.jpg",
+      "quantity": 1,
+      "banner": "/assets/images/banner-tastiere.png"
+    },
+    {
+      "id_product": "8",
+      "name": "Bontempi",
+      "description": "Progettata appositamente per bambini che iniziano il loro percorso musicale, è una tastiera compatta da 49 tasti con tutte le funzioni normalmente presenti in tastiere di taglio più grande. Con un ampia gamma di suoni, di ritmi, un lettore di brani MP3, offre anche funzioni di registrazione/riproduzione e learning per la pratica assistita. Può funzionare a batterie, fondamentale per un'utilizzo scolastico, o con l'alimentatore (non incluso).",
+      "price": "155.70",
+      "fk_category": "1",
+      "image1": "/assets/images/bontempi2.jpg",
+      "image2": "/assets/images/bontempi1.jpg",
+      "quantity": 1,
+      "banner": "/assets/images/banner-tastiere.png"
+    },
+    {
+      "id_product": "1",
+      "name": "Chitarra Classica Student",
+      "description": "Questa chitarra classica è stata da noi scelta per chi vuole imparare a suonare o vuole una chitarra da poter usare senza preoccupazioni nelle serate in spiaggia o con gli amici. La buona costruzione e il suono soddisfacente ne fanno un prodotto dall'alto rapporto qualità prezzo.",
+      "price": "57.00",
+      "fk_category": "2",
+      "image1": "/assets/images/chitarra.jpg",
+      "image2": "/assets/images/chitarra1.jpg",
+      "quantity": 1,
+      "banner": "/assets/images/banner-chitarre.png"
+    },
+    {
+      "id_product": "2",
+      "name": "Savannah sgd-10 bk Blackt",
+      "description": "Questa chitarra classica è stata da noi scelta per chi vuole imparare a suonare o vuole una chitarra da poter usare senza preoccupazioni nelle serate in spiaggia o con gli amici. La buona costruzione e il suono soddisfacente ne fanno un prodotto dall'alto rapporto qualità prezzo.",
+      "price": "89.99",
+      "fk_category": "2",
+      "image1": "/assets/images/chitarra2.jpg",
+      "image2": "/assets/images/chitarra02.jpg",
+      "quantity": 1,
+      "banner": "/assets/images/banner-chitarre.png"
+    },
+    {
+      "id_product": "3",
+      "name": "EKO Ranger 6 Black",
+      "description": "CHITARRA ACUSTICA NATURALE Savannah si dedica a portare strumenti acustici classici della tradizione folk americana a musicisti di tutti i livelli. Con caratteristiche eccezionali e prezzi imbattibili, gli strumenti Savannah sono un ottimo modo per esplorare strumenti acustici popolari a un prezzo ragionevole, ma senza sacrificare la qualità.",
+      "price": "102.00",
+      "fk_category": "2",
+      "image1": "/assets/images/chitarra3.jpg",
+      "image2": "/assets/images/chitarr2.jpg",
+      "quantity": 1,
+      "banner": "/assets/images/banner-chitarre.png"
+    },
+    {
+      "id_product": "4",
+      "name": "EKO Ranger 6 Black",
+      "description": "CHITARRA ACUSTICA NERA Eko Ranger 6 è caratterizzata dal classico shape Dreadnought con top in Abete e fondo e fasce in Linden. Il manico è in Okoumè con tastiera in South American Roupanà a 20 tasti, selletta e capotasto in plastica. Ranger è sicuramente la parola che risuona maggiormente nella storia Eko e che ha contribuito ad affermarlo come marchio a livello europeo. Nata con il nome J-52, questa chitarra viene ogni volta aggiornata e migliorata fino ad arrivare alle versioni J-54 (6 corde) e J-56 (12 corde) che nel 1967 vengono nominate rispettivamente Ranger VI e Ranger XII.Famose per l'ottimo rapporto qualità prezzo e per la loro indistruttibilità, sono presenti ancora oggi nelle case di molti chitarristi, magari in un angolo del salotto come oggetto di arredo. Perfetta per chi fa il primo passo nel mondo della chitarra acustica, è disponibile in più varianti di colore: Natural, Black, Blue Sunburst, Brown Sunburst e Red Sunburst.",
+      "price": "99.00",
+      "fk_category": "2",
+      "image1": "/assets/images/chitarra4.jpg",
+      "image2": "/assets/images/chitarra04.jpg",
+      "quantity": 1,
+      "banner": "/assets/images/banner-chitarre.png"
+    },
+    {
+      "id_product": "1",
+      "name": "Bryce BBG011 Basso Elettrico 5 Corde ",
+      "description": "Il Basso Elettrico a 5 Corde colore in finitura Rosso, ampia gamma tonale grazie ai doppi Pickup tipo JazzBass. Il basso ideale per studenti esigenti, si distingue per la splendida finitura cromata e il suono deciso e pulito. Il ponte è completamente regolabile, quindi puoi cambiare l'altezza della corda in base al tuo stile. Possiede i controlli del volume e del tono, con un ingresso jack da 1/4 di pollice nella parte inferiore.",
+      "price": "119.00",
+      "fk_category": "3",
+      "image1": "/assets/images/basso.jpg",
+      "image2": "/assets/images/basso1.jpg",
+      "quantity": 1,
+      "banner": "/assets/images/banner-basso.png"
+    },
+    {
+      "id_product": "2",
+      "name": "Bryce BBG007 basso elettrico 5 Corde  ",
+      "description": "Basso a 4 corde di colore Sunburst, con meccaniche cromate Die Cast, Pickup Split Coil, controlli di tono e volume, manico in acero e 20 tasti.",
+      "price": "145.50",
+      "fk_category": "3",
+      "image1": "/assets/images/basso2.jpg",
+      "image2": "/assets/images/basso02.jpg",
+      "quantity": 1,
+      "banner": "/assets/images/banner-basso.png"
+    },
+    {
+      "id_product": "3",
+      "name": "Bryce BBG012 Basso Elettrico 5 Corde ",
+      "description": "Il Basso Elettrico a 5 Corde nell'elegante finitura NERO, eccellente gamma tonale grazie ai doppi Pickup Stile Jazz Bass. Ideale per avvicinarsi al basso a 5 corde questo basso è caratterizzato da finiture cromate e da un suono definito e pulito. Il ponte è completamente regolabile, quindi puoi cambiare l'altezza della corda in base al tuo stile. Possiede i controlli del volume e del tono, con un ingresso jack da 1/4 di pollice nella parte inferiore.",
+      "price": "115.50",
+      "fk_category": "3",
+      "image1": "/assets/images/basso3.jpg",
+      "image2": "/assets/images/basso03.jpg",
+      "quantity": 1,
+      "banner": "/assets/images/banner-basso.png"
+    },
+    {
+      "id_product": "4",
+      "name": "Dimavery PB-500 E-Bass basso elettrico | Surf Green ",
+      "description": "Il basso elettrico Dimavery PB-550 E-Bass, in questa versione con finitura Surf Green, è uno strumento classico, dallo stile vintage e perfetto anche per principianti e studenti. Dotato di trussrod a doppia azione per personalizzare il proprio sound, presenta un doppio pickup single coil, uno dei quali in configurazione Split.",
+      "price": "127.50",
+      "fk_category": "3",
+      "image1": "/assets/images/basso4.jpg",
+      "image2": "/assets/images/basso04.jpg",
+      "quantity": 1,
+      "banner": "/assets/images/banner-basso.png"
+    },
+    {
+      "id_product": "1",
+      "name": "Behringer XM8500 microfono da studio",
+      "description": "Un microfono per voce dal Suono chiaro, potente e ricco di sfumature che passa attraverso qualsiasi mix. L'ULTRAVOICE, grazie al suo digramma polare cardioide rileva con la massima sensibilità il suono anteriormente, mentre smorza notevolmente il suono dalle altre direzioni, fornendo assoluta protezione dal feedback.",
+      "price": "22.50",
+      "fk_category": "4",
+      "image1": "/assets/images/voce.jpg",
+      "image2": "/assets/images/voce1.jpg",
+      "quantity": 1,
+      "banner": "/assets/images/banner-voce.png"
+    },
+    {
+      "id_product": "2",
+      "name": "Alctron UM900V microfono da studio",
+      "description": "Il microfono da studio a condensatore Alctron UM900V USB ha un pick-up pattern cardioide e porta USB standard. Può essere utilizzato senza installare alcun software quando funziona nei sistemi WINDOWS e MAC. Inoltre, può identificare automaticamente le apparecchiature di registrazione MAC. È un microfono a condensatore USB plug-and-play, che apre possibilità per chiunque registri audio da podcaster, giornalisti, studenti e presentazioni multimediali. UM900V dispone di un interruttore di guadagno e pulsante mute. Premndo il pulsante mute, la registrazione si ferma immediatamente.",
+      "price": "55.00",
+      "fk_category": "4",
+      "image1": "/assets/images/voce2jpg.jpg",
+      "image2": "/assets/images/voce02.jpg",
+      "quantity": 1,
+      "banner": "/assets/images/banner-voce.png"
+    },
+    {
+      "id_product": "3",
+      "name": "Alctron MC001 microfono da studio",
+      "description": "L'Alctron MC001 è un microfono a condensatore professionale ad ampio diaframma con e interno 6dB 100hz bassa frequenza. Caratterizzato con alta sensibilità, basso rumore, ampia risposta in frequenza e alta gestione SPL pure, questo microfono è ideale per le prestazioni sul palco, strumento e registrazione vocale. Inoltre, è anche la scelta migliore per quegli appassionati di musica e home-recorder.",
+      "price": "59.00",
+      "fk_category": "4",
+      "image1": "/assets/images/voce3.jpg",
+      "image2": "/assets/images/voce03.jpg",
+      "quantity": 1,
+      "banner": "/assets/images/banner-voce.png"
+    },
+    {
+      "id_product": "4",
+      "name": "Behringer C1 Microfono Professionale da Studio",
+      "description": "Microfono per smartphone Apple iPhone e iPad",
+      "price": "59.00",
+      "fk_category": "4",
+      "image1": "/assets/images/voce04.jpg",
+      "image2": "/assets/images/voce4.jpg",
+      "quantity": 1,
+      "banner": "/assets/images/banner-voce.png"
+    },
+    {
+      "id_product": "1",
+      "name": "Pioneer DJ DDJ FLX6 Serato Rekordbox",
+      "description": "Pioneer DJ DDJ FLX6 Serato Rekordbox",
+      "price": "599.00",
+      "fk_category": "5",
+      "image1": "/assets/images/dj.jpg",
+      "image2": "/assets/images/dj2.jpg",
+      "quantity": 1,
+      "banner": "/assets/images/banner-dj.png"
+    },
+    {
+      "id_product": "2",
+      "name": "Controller DJ Smart Pioneer DDJ 200",
+      "description": "pioneer ddj 200, Dai il via al DJing con la nostra console intelligente DDJ-200 facile da utilizzare. Leggera e compatta con un lay-out di stile professionale, ti aiuterà a imparare l'arte del mixaggio e, se vorrai, a sviluppare il DJing, trasformandolo da un hobby a ben altro.",
+      "price": "199.00",
+      "fk_category": "5",
+      "image1": "/assets/images/dj3.jpg",
+      "image2": "/assets/images/dj03.jpg",
+      "quantity": 1,
+      "banner": "/assets/images/banner-dj.png"
+    },
+    {
+      "id_product": "3",
+      "name": "Console DENON DJ PRIME 4 Smart Pioneer",
+      "description": "Gestisci ogni tipo di evento in qualsiasi luogo! La Denon Prime 4 è la prima console stand alone a 4 deck All-in-one con display a colori da 10 touch e multi gesture. Funziona senza l'ausilio di un computer o di un laptop esterno e rende disponibile tutta la tua raccolta musicale collegandoti in modo trasparente alle tue Playlist. Con il controllo hardware a 4 deck e il touchscreen avanzato, sei pronto per gestire qualsiasi DJ set, sempre e ovunque. Tutti i file sono utilizzabili ed editabili comodamente dall'ampio display tattile da 10. Il mixer dual zone consente di suonare simultaneamente playlist diverse in due ambienti differenti. Grazie al collegamento StagelinQ potrai anche controllare video ed effetti luce.",
+      "price": "1998.00",
+      "fk_category": "5",
+      "image1": "/assets/images/dj4.jpg",
+      "image2": "/assets/images/dj04.jpg",
+      "quantity": 1,
+      "banner": "/assets/images/banner-dj.png"
+    },
+    {
+      "id_product": "1",
+      "name": "Timbali Tito Puente Solid Brass, 14/15,Latin Percussion,Latin Percussion",
+      "description": "Shell material: Solid Brass. Shell diameter: 12/13 (LP255-B). 13/14 (LP256-B). 14/15 (LP257-B). Depth: 6.5 Tuning system Traditional Tuning. Stand Double braced. Incl. cowbell bracket timbale Bacchette and tuning wrench.",
+      "price": "587.00",
+      "fk_category": "6",
+      "image1": "/assets/images/per.jpg",
+      "image2": "/assets/images/per.jpg",
+      "quantity": 1,
+      "banner": "/assets/images/banner-percussioni.png"
+    },
+    {
+      "id_product": "1",
+      "name": "Vox MV50 AC",
+      "description": "Testata per chitarra 50W di potenza di uscita per un perfetto tono tubeTestata ultra-compatta con maniglia integrata Predisposta per circuiti analogici classici Interruttore EQ aggiunge o taglia frequenze di fascia bassa",
+      "price": "169.00",
+      "fk_category": "7",
+      "image1": "/assets/images/ampl.jpg",
+      "image2": "/assets/images/ampl2.jpg",
+      "quantity": 1,
+      "banner": "/assets/images/banner-amplificazione.png"
+    },
+    {
+      "id_product": "2",
+      "name": "Tascam US20x20",
+      "description": "La scheda audio Tascam US-20X20 permette di collegare fino a 20 ingressi XLR e Line al computer e di gestire ben 20 uscite. Gli 8 preamplificatori microfono Ultra-HDDA forniscono fino a 56db di guadagno e garantiscono un suono pulito e privo di rumori. Per la registrazione di strumenti come chitarra o basso sono previsti 8 ingressi di linea commutabili. Inoltre sono disponibili 10 uscite bilanciate di linea, 2 con un controllo per il monitoraggio sul pannello anteriore.",
+      "price": "525.00",
+      "fk_category": "7",
+      "image1": "/assets/images/ampl3.jpg",
+      "image2": "/assets/images/ampl03.jpg",
+      "quantity": 1,
+      "banner": "/assets/images/banner-amplificazione.png"
+    },
+    {
+      "id_product": "3",
+      "name": "B&W HTM6 S2 ",
+      "description": "Diffusore per canale centrale",
+      "price": "579.00",
+      "fk_category": "7",
+      "image1": "/assets/images/amp4.jpg",
+      "image2": "/assets/images/ampl04.jpg",
+      "quantity": 1,
+      "banner": "/assets/images/banner-amplificazione.png"
+    },
+    {
+      "id_product": "1",
+      "name": "Atomic Pro Rudy testa mobile 3in1 200W",
+      "description": "L'Atomic Pro Rudy 3in1 è una testa mobile con ottica variabile on grado di lavorare in modalità beam e spot, oltre che l'effetto wash utilizzando in combinazione lo zoom con il filtro frost. Dotata di due ruote gobo, una con gobo statici e una con gobos rotanti intercambiabili, offre un prisma a 4 facce. La sorgente luminosa è in Led da 200W, la macchina è dotata di messa fuoco elettronica e dimmer meccanico e può essere controllata in modalità DMX512, funzionare in Auto, in cascata con Master/Slave.",
+      "price": "1559.00",
+      "fk_category": "8",
+      "image1": "/assets/images/luci.jpg",
+      "image2": "/assets/images/luci1.jpg",
+      "quantity": 1,
+      "banner": "/assets/images/banner-luci.png"
+    },
+    {
+      "id_product": "2",
+      "name": "Ibiza Light STAR-WASH-WH testa mobile 3-in-1",
+      "description": "La Ibiza Light STAR-WASH-WH, in questa versione con struttura di colore bianco, è una testa mobile 3-in-1 dotata di uno spot centrale da 30W che riempie la stanza con gobo multicolori potenti e molto precisi. I sei LED RGBW 4-in-1 creano un effetto Wash e anche la base è uno spettacolo a sé stante, grazie a un'illuminazione a raggiera intelligentemente integrata. Questa mini testa mobile veloce, silenziosa e potente è adatta a tutti i tipi di eventi e applicazioni.",
+      "price": "179.00",
+      "fk_category": "8",
+      "image1": "/assets/images/luci2.jpg",
+      "image2": "/assets/images/luci02.jpg",
+      "quantity": 1,
+      "banner": "/assets/images/banner-luci.png"
+    },
+    {
+      "id_product": "3",
+      "name": "AFX BLADE8-FX testa mobile a 4 raggi a 8 LED",
+      "description": "L'AFX BLADE8-FX è uno spettacolare effetto luce costituito da una testa mobile a 4 raggi, ognuno dei quali ospita 2 LED da 12W RGBW. ",
+      "price": "466.20",
+      "fk_category": "8",
+      "image1": "/assets/images/luci3jpg.jpg",
+      "image2": "/assets/images/luci03jpg.jpg",
+      "quantity": 1,
+      "banner": "/assets/images/banner-luci.png"
+    },
+    {
+      "id_product": "1",
+      "name": "Tama RM52KH6C-WH",
+      "description": "Batteria TAMA RM50YH6C White 9 strati, fusti in pioppo offrono un grande tono Hardware Cromato e finitura nera.Ideale per batteristi principianti/intermedi Cerchi per grancassa in legno di alta qualità Include Tama Hardware Kit e piatti",
+      "price": "749.00",
+      "fk_category": "9",
+      "image1": "/assets/images/batt.jpg",
+      "image2": "/assets/images/batt.jpg",
+      "quantity": 1,
+      "banner": "/assets/images/banner-batterie.png"
+    }
+    
+  
+  ],
+  "cartshoppings": [
+
+  ]
+}

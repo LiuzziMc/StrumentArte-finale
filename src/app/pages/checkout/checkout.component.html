@@ -1,0 +1,162 @@
+<!--CHECKOUT-->
+<br><br><br><br><br><br>
+<div class="container bg-gradient ">
+  <div class="py-5 text-center">
+    <h2>CHECKOUT</h2>
+    <hr class="text-Brown">
+  </div>
+  <div class="row">
+    <div class="col-md-4 order-md-2 mb-4">
+      <h4 class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text-muted">Riepilogo</span>
+      </h4>
+      <ul class="list-group mb-3 sticky-top">
+        <li class="list-group-item d-flex justify-content-between lh-condensed" *ngFor="let item of items">
+          <div>
+            <h6 class="my-0">{{ item.name.toUpperCase () }}</h6>
+            <small class="text-muted"></small>
+          </div>
+          <span class="text-muted">€{{ item.price }}</span>
+        </li>
+
+        <li class="list-group-item d-flex justify-content-between text-white">
+          <span>TOTALE</span>
+          <strong>{{ getTotalPrice() | currency: 'EUR' }}</strong>
+        </li>
+      </ul>
+
+      <div class="input-group">
+        <input type="text" id="form3Examplea2" [(ngModel)]="discountCode" class="form-control form-control-lg " />
+
+        <button type="submit" class="btn bg-facebook btn-lg btn-block border-white text-white">Applica</button>
+        <div *ngIf="!isDiscountCodeValid()" class="text-black">
+
+        </div>
+      </div>
+
+
+    </div>
+    <div class="col-md-8 order-md-1">
+      <h4 class="mb-3">Indirizzo di fatturazione</h4>
+      <form class="needs-validation" novalidate="">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="firstName" class="text-white">Nome</label>
+            <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+            <div class="invalid-feedback"> Valid first name is required. </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="lastName" class="text-white">Cognome</label>
+            <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+            <div class="invalid-feedback"> Valid last name is required. </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <div class="mb-4 pb-2">
+            <label class="form-label text-white" for="phoneNumber">Numero di telefono</label>
+            <input type="tel" id="phoneNumber" class="form-control form-control-lg" />
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="text-white">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="mario@esempio.com">
+          <div class="invalid-feedback"> Please enter a valid email address for shipping updates. </div>
+        </div>
+        <div class="mb-3">
+          <label for="address" class="text-white">Indirizzo</label>
+          <input type="text" class="form-control" id="address" required="">
+          <div class="invalid-feedback"> Please enter your shipping address. </div>
+        </div>
+        <div class="mb-3">
+          <label for="address2" class="text-white">Indirizzo 2 <span class="text-muted">(Opzionale)</span></label>
+          <input type="text" class="form-control" id="address2">
+        </div>
+        <div class="row">
+          <div class="col-md-5 mb-3">
+            <label for="country" class="text-white">Città</label>
+            <select class="form-control d-block w-100 bg-dark text-white" id="country" required="">
+              <option value="">Lecce...</option>
+              <option>Lecce</option>
+            </select>
+            <div class="invalid-feedback"> Please select a valid country. </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="state" class="text-white">Nazione</label>
+            <select class="form-control d-block w-100  bg-dark text-white" id="state" required="">
+              <option value="">Italia...</option>
+              <option>Italia</option>
+            </select>
+            <div class="invalid-feedback"> Please provide a valid state. </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="zip" class="text-white">CAP</label>
+            <input type="text" class="form-control" id="zip" placeholder="" required="">
+            <div class="invalid-feedback"> Zip code required. </div>
+          </div>
+        </div>
+        <hr class="mb-4 text-Brown">
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="same-address">
+          <label for="same-address">L'indirizzo di spedizione è lo stesso del mio
+            indirizzo di fatturazione</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="save-info">
+          <label class="custom-control-label" for="save-info">Salva le informazioni per la prossima volta</label>
+        </div>
+        <hr class="mb-4 text-Brown">
+
+        <h4 class="mb-3">Pagamento</h4>
+        <div class="d-block my-3">
+          <div class="custom-control custom-radio">
+            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked="" required="">
+            <label class="custom-control-label" for="credit">Carta di credito</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required="">
+            <label class="custom-control-label" for="debit">Carta di debito</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required="">
+            <label class="custom-control-label" for="paypal">PayPal</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="cc-name" class="text-white">Nome sulla carta</label>
+            <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+            <small class="text-muted">Nome completo visualizzato sulla carta</small>
+            <div class="invalid-feedback"> Name on card is required </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="cc-number" class="text-white">Numero carta</label>
+            <input type="text" class="form-control" id="cc-number" placeholder="" required="">
+            <div class="invalid-feedback"> Credit card number is required </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 mb-3">
+            <label for="cc-expiration" class="text-white">Scadenza</label>
+            <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
+            <div class="invalid-feedback"> Expiration date required </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="cc-cvv" class="text-white">CVV</label>
+            <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+            <div class="invalid-feedback"> Security code required </div>
+          </div>
+        </div>
+        <hr class="mb-4 text-Brown">
+        <button class="btn bg-facebook btn-lg btn-block border-white text-white">Paga</button>
+      </form>
+    </div>
+  </div>
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">© 2017-2019 Company Name</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#">Privacy</a></li>
+      <li class="list-inline-item"><a href="#">Terms</a></li>
+      <li class="list-inline-item"><a href="#">Support</a></li>
+    </ul>
+  </footer>
+</div>

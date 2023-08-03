@@ -1,0 +1,53 @@
+<img src="assets/images/bnr.jpg" class="w-100"><br><br>
+<div class="card">
+    <div class="row">
+        <div class="col-md-8 cart">
+            <div class="title">
+                <div class="row">
+                    <div class="col">
+                        <h4 class="text-black"><b>Preferiti</b></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row border-top border-bottom" *ngFor="let product of preferiti">
+                <div class="row main align-items-center">
+                    <div class="col-2">
+                        <img class="picture1 w-100" [src]="product.image1" [alt]="product.name" />
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                            <h6 class="text-black text-center">{{ product.name.toUpperCase () }}</h6>
+                        </div>
+
+                    </div>
+                    <div class="col-2 text-black">
+                        {{product.price | currency: 'EUR'}}
+                    </div>
+
+                    <div class="col-3">
+                    
+                        <button (click)="addToCart(product)" class="btn bg-facebook btn-block border-white text-white">Aggiungi al carrello </button>
+                    
+                    </div>
+                    <div class="col-md-1 col-lg-1 col-xl-1  ">
+                        <a class="text-black"  (click)="removeFromPreferiti(product)"><i class="bi bi-trash "
+                            role="button"></i></a>
+                    </div>
+
+                </div>
+                
+            </div>
+            <div class="back-to-shop"><a href="" role="button">&leftarrow;</a><span class="text-muted"></span></div>
+        </div>
+
+        <div class="col-2 summary">
+            
+            <div>
+                <button type="button" class="btn bg-facebook btn-block btn-lg text-white" style="margin-top: 150px;"
+                data-mdb-ripple-color="dark" (click)="emptyPreferiti()">Svuota Preferiti</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+<br>

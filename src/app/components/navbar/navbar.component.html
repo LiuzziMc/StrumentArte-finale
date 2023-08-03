@@ -1,0 +1,38 @@
+<!--NAVBAR-->
+
+<div class="position-absolute navbar-z-index w-100">  
+    <nav class="navbar navbar-expand-lg navbar-dark top-0 left-0 w-100">
+        <div class="d-flex align-items-center justify-content-between w-100">
+            <div>
+                <a class="navbar-brand" href="#"><img src="assets/images/Logo.png" class="img-fluid" alt="Logo" width="320"></a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto ms-auto">
+                    <li class="nav-item" *ngFor="let category of categories" (click)="goToPage(category.name.toLowerCase())">
+                        <a class="nav-link" role="button">{{ category.name.toUpperCase() }}</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input type="search" placeholder="Cerca...">
+                <button class="btn-xs bg-facebook img-fluid" type="submit"><i class="bi bi-search"></i></button>
+            </div>
+            <div class="row header-user">
+                
+  <!-- Button to open the Login Modal -->
+                <i *ngIf="!isLogged" class="col-3 fa-xl text-white img-fluid me-2"(click)="handleUserIconClick()" role="button" data-bs-target="#loginModal" data-bs-toggle="modal"><fa-icon [icon]="faUser"></fa-icon></i>
+                <i *ngIf="isLogged" class="col-3 fa-xl text-white img-fluid me-2"(click)="handleUserIconClick()" role="button"><fa-icon [icon]="faUser"></fa-icon></i>
+                
+                <a class="col-3 fa-xl text-white img-fluid" (click)="goToCart('carrello')" role="button"><fa-icon [icon]="faCartShopping"></fa-icon></a>
+                <a class="col-3 fa-xl text-white img-fluid"  *ngIf="isLogged" (click)="goToFavorite('preferiti')" role="button"><fa-icon [icon]="faHeart"></fa-icon></a>
+                
+            </div>
+        </div>
+    </nav>
+</div>
+
