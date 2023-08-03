@@ -289,12 +289,12 @@ CREATE TABLE `utente` (
   `EMAIL` char(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `PASSWORD_UTENTE` char(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `NUMERO_TELEFONO` int DEFAULT NULL,
-  `DATA_NASCITA` int DEFAULT NULL,
+  `DATA_NASCITA` date DEFAULT NULL,
   `NOME` char(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `COGNOME` varchar(45) COLLATE utf8mb3_bin DEFAULT NULL,
   PRIMARY KEY (`ID_UTENTE`),
   UNIQUE KEY `EMAIL` (`EMAIL`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -303,7 +303,7 @@ CREATE TABLE `utente` (
 
 LOCK TABLES `utente` WRITE;
 /*!40000 ALTER TABLE `utente` DISABLE KEYS */;
-INSERT INTO `utente` VALUES (1,'Via V.Gigante n5, Lecce, 73100','carmela.liuzzi20@gmail.com','pippo',NULL,NULL,NULL,NULL),(2,'Via Pluto n3, Lecce, 73100','info@gmail.com','info',NULL,NULL,NULL,NULL),(3,'Via V.Gigante n5, Lecce, 73100','barto@gmail.com','pluto',NULL,NULL,NULL,NULL),(4,'Via G.Vergine n3, Lecce, 73100','sergiodel@gmail.com','barto',NULL,NULL,NULL,NULL),(5,'Via Roma n1, Lecce, 73100','katiagiann@gmail.com','ale',NULL,NULL,NULL,NULL),(6,'Via Montegiordano n10, Montemesola, 74020','cirachirico50@gmail.com','scerra',NULL,NULL,NULL,NULL),(7,'Via Ennio n19, Lecce, 73100','rosyro@gmail.com','roro90',NULL,NULL,NULL,NULL),(8,'Via Senna n30, Lecce, 73100','maissica@gmail.com','mare',NULL,NULL,NULL,NULL),(9,'Via Mazzini n48, Lecce, 73100','rosari@gmail.com','fuori',NULL,NULL,NULL,NULL),(10,'Via Elsa n9, Lecce, 73100','caput@gmail.com','caput',NULL,NULL,NULL,NULL),(11,'null','jghgi@hkhi.it','jyiyuth',NULL,NULL,NULL,NULL),(12,'null','','ddddddd',NULL,NULL,NULL,NULL),(14,'null','pippo@pippo.it','plutopippo',NULL,NULL,NULL,NULL),(16,'null','pippo@pipipo.it','plutopippo',NULL,NULL,NULL,NULL),(17,'null','pippo@piipipo.it','plutopippo',NULL,NULL,NULL,NULL),(18,'null','huguf@gmail.com','fsfsdf',NULL,NULL,NULL,NULL),(20,'null','hugu3fff@gmail.com','fsfsdf',NULL,NULL,NULL,NULL),(21,'null','cvcxvxcv@fsdfsd.it','fsfsd',NULL,NULL,NULL,NULL),(23,'null','cvcxvxcv@fsdfdfsd.it','fsfsd',NULL,NULL,NULL,NULL),(24,'null','carm@gmail.com','carm',NULL,NULL,NULL,NULL),(25,'null','FrancescoCorvino@gmail.com','francescoinfo',NULL,NULL,NULL,NULL),(26,'null','jacopo@gmail.com','giacomo',NULL,NULL,NULL,NULL),(27,'null','devolp@pier.it','developier',NULL,NULL,NULL,NULL);
+INSERT INTO `utente` VALUES (1,'Via V.Gigante n5, Lecce, 73100','carmela.liuzzi20@gmail.com','pippo',NULL,NULL,NULL,NULL),(2,'Via Pluto n3, Lecce, 73100','info@gmail.com','info',NULL,NULL,NULL,NULL),(3,'Via V.Gigante n5, Lecce, 73100','barto@gmail.com','pluto',NULL,NULL,NULL,NULL),(4,'Via G.Vergine n3, Lecce, 73100','sergiodel@gmail.com','barto',NULL,NULL,NULL,NULL),(5,'Via Roma n1, Lecce, 73100','katiagiann@gmail.com','ale',NULL,NULL,NULL,NULL),(6,'Via Montegiordano n10, Montemesola, 74020','cirachirico50@gmail.com','scerra',NULL,NULL,NULL,NULL),(7,'Via Ennio n19, Lecce, 73100','rosyro@gmail.com','roro90',NULL,NULL,NULL,NULL),(8,'Via Senna n30, Lecce, 73100','maissica@gmail.com','mare',NULL,NULL,NULL,NULL),(9,'Via Mazzini n48, Lecce, 73100','rosari@gmail.com','fuori',NULL,NULL,NULL,NULL),(10,'Via Elsa n9, Lecce, 73100','caput@gmail.com','caput',NULL,NULL,NULL,NULL),(11,'null','jghgi@hkhi.it','jyiyuth',NULL,NULL,NULL,NULL),(12,'null','','ddddddd',NULL,NULL,NULL,NULL),(14,'null','pippo@pippo.it','plutopippo',NULL,NULL,NULL,NULL),(16,'null','pippo@pipipo.it','plutopippo',NULL,NULL,NULL,NULL),(17,'null','pippo@piipipo.it','plutopippo',NULL,NULL,NULL,NULL),(18,'null','huguf@gmail.com','fsfsdf',NULL,NULL,NULL,NULL),(20,'null','hugu3fff@gmail.com','fsfsdf',NULL,NULL,NULL,NULL),(21,'null','cvcxvxcv@fsdfsd.it','fsfsd',NULL,NULL,NULL,NULL),(23,'null','cvcxvxcv@fsdfdfsd.it','fsfsd',NULL,NULL,NULL,NULL),(24,'null','carm@gmail.com','carm',NULL,NULL,NULL,NULL),(25,'null','FrancescoCorvino@gmail.com','francescoinfo',NULL,NULL,NULL,NULL),(26,'null','jacopo@gmail.com','giacomo',NULL,NULL,NULL,NULL),(27,'null','devolp@pier.it','developier',NULL,NULL,NULL,NULL),(29,'null','prova@prova.it','prova',746383947,'2000-02-10','prova','prova');
 /*!40000 ALTER TABLE `utente` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -316,4 +316,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-08-02 12:59:27
+-- Dump completed on 2023-08-03 12:03:43
